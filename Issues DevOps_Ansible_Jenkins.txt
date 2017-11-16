@@ -1,0 +1,53 @@
+no tty present and no askpass program specified: Jenkins Pipeline error
+
+we have add jenkins user in sudoers file
+--------------------------------------------------
+
+when it will ping sucessfully in local machine but in jenkins, we have add 'sudo' before ansible all -m ping' in pipeline script to the below error.
+
+172.31.20.185 | UNREACHABLE! => {
+    "changed": false, 
+    "msg": "Failed to connect to the host via ssh: Host key verification failed.\r\n", 
+    "unreachable": true
+
+---------------------------------------------------
+
+Add security group with 8080 port to connect jenkins in ec2 ubuntu instance
+
+---------------------------------------------------
+
+
+
+
+-----------------------------------------------------
+cd ~/.ssh/  (ls ~/.ssh/)
+
+=> authorized_keys  id_rsa  id_rsa.pub  known_hosts
+
+check whether the public keys are correctly copied or not
+-----------------------------------------------------
+
+
+sudo vi /etc/ssh/sshd_config
+sudo vi /etc/selinux/config
+sudo vi /etc/resolv.conf
+sudo vi /etc/hosts
+sudo vi /var/lib/jenkins/workspace/<< Job created >>
+
+[firewall setings]
+
+sudo service ufw status | start | restart | stop
+
+
+
+
+---------------------------------------------------------------------
+For CentOS/Linux:
+
+
+sudo systemctl start/stop/status/restart  jenkins/httpd/sshd
+---------------------------------------------------------------------
+
+
+
+
